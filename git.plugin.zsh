@@ -261,7 +261,7 @@ function git_count_all() {
 
 # List all git aliases from the README:
 function git_list_aliases() {
-  filename=~/.oh-my-zsh/custom/plugins/git/README.md
+  filename=$ZPLUG_REPOS/Grafcube/git/README.md
   from=$(grep -Fno '| **g** ' ${filename} | cut -f1 -d:)
   stop=$(grep -no '&nbsp;' ${filename} | cut -f1 -d:)
   to=$((stop - 2))

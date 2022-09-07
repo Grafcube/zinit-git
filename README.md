@@ -1,13 +1,18 @@
-# oh-my-zsh git plugin
+# zplug git plugin
+
+> This is a minor change to @davidde's plugin to make `galias` work with zplug.
+
 This plugin is a complete replacement for the default oh-my-zsh git plugin,
 and provides quite a few useful aliases and functions.
 The motivation to replace the default plugin stems from the fact
 that it comes with some inconsistencies that make a few popular commands
 rather unintuitive:
-* `gcm='git checkout master'`: this is inconsistent with `gco='git checkout'`,  
- and on top of that it steals what should be the shortcut for `git commit -m`.
-* Similar issues with `git log`: half of the commands use `glg`, the other half `gl`,  
-  but `gl` by itself is `git pull` (!?), for which `gpl` would make more sense.
+
+* `gcm='git checkout master'`: this is inconsistent with `gco='git checkout'`,
+and on top of that it steals what should be the shortcut for `git commit -m`.
+* Similar issues with `git log`: half of the commands use `glg`, the other half
+`gl`, but `gl` by itself is `git pull` (!?), for which `gpl` would make more
+sense.
 * ...
 
 The efficiency of these shortcuts is kind of lost when you have to remember
@@ -15,23 +20,16 @@ different letters for the same subcommand depending on the parameter(s)
 you're using ...
 
 In this plugin, great care care is taken to make sure all aliases are the most
-intuitive they can possibly be.  
+intuitive they can possibly be.
 On top of that, quite a few extra functions are added.
 
-
 ## Installation
-To use this plugin, clone this repo to `~/.oh-my-zsh/custom/plugins`:
-```
-git clone https://github.com/davidde/git.git ~/.oh-my-zsh/custom/plugins/git
-```
-This will automatically override the default git plugin.
 
-If you aren't yet using the default plugin,
-add `git` to the plugins in your `~/.zshrc` file:
-```
-plugins=(git)
-```
+Install using [zplug](https://github.com/zplug/zplug).
 
+```zsh
+zplug "Grafcube/zplug-git"
+```
 
 ## Aliases cheatsheet
 
@@ -165,22 +163,22 @@ plugins=(git)
 | **gwch**        | git whatchanged -p                                        |
 &nbsp;
 
-
 -------------------------------------------------------------------------------
-> :warning: **Note:**  
-> 
+> :warning: **Note:**
+>
 > This cheatsheet is optimized for memorability,
 > and may not correspond literally with the actual aliases. E.g.:
->   - "git graph branches"
->   - `git log` commands are actually more verbose for nicer output.
->   - `git commit -m --gpg-sign` has its flags switched because `-m` needs to be last.
->   - Etc.
-> 
+>
+> * "git graph branches"
+> * `git log` commands are actually more verbose for nicer output.
+> * `git commit -m --gpg-sign` has its flags switched because `-m` needs to be last.
+> * Etc.
+>
 > Check out all commands with usage and clarifications in your local
 > [git.plugin.zsh](./git.plugin.zsh) or the
-> [repo's source code](https://github.com/davidde/git/blob/master/git.plugin.zsh).  
-> 
+> [repo's source code](https://github.com/Grafcube/git/blob/master/git.plugin.zsh).
+>
 > Alternatively, run `alias` to see *all* alias implementations,
-> or `galias` for this cheatsheet.  
+> or `galias` for this cheatsheet.
 > If you want to see any specific implementation, simply run `which <alias/function>`.
 -------------------------------------------------------------------------------
