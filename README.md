@@ -1,6 +1,6 @@
-# zplug git plugin
+# zinit git plugin
 
-> This is a minor change to @davidde's plugin to make `galias` work with zplug.
+> This is a minor change to @davidde's plugin to make `galias` work with zinit.
 
 This plugin is a complete replacement for the default oh-my-zsh git plugin,
 and provides quite a few useful aliases and functions.
@@ -25,10 +25,10 @@ On top of that, quite a few extra functions are added.
 
 ## Installation
 
-Install using [zplug](https://github.com/zplug/zplug).
+Install using [zinit](https://github.com/zdharma-continuum/zinit).
 
 ```zsh
-zplug "Grafcube/zplug-git"
+zinit load "Grafcube/zinit-git"
 ```
 
 ## Aliases cheatsheet
